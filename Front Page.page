@@ -4,6 +4,10 @@ title: Wiki Gconfs \g/
 categories: base
 ---
 
+Gconfs est l'association d'organisation de conférences d'Épita. Ceci est son wiki.
+
+Vous trouverez ici des infos sur les services accessibles aux membres de Gconfs, mais aussi des informations sur les différents outils utilisés et la façon dont ils fonctionnent, des informations sur les différentes conférences organisées régulièrement, etc.
+
 Déployé grace a gitit sur le serveur gconfs.fr.
 
 Pour l'éditer, clonez le dépot `git clone gconfs.fr:/srv/gitit/wikidata wiki_gconfs`,
