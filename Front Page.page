@@ -1,0 +1,11 @@
+---
+format: Markdown
+title: Wiki Gconfs \g/
+categories: base
+---
+
+Déployé grace a gitit sur le serveur gconfs.fr.
+
+Pour l'éditer, clonez le dépot `git clone gconfs.fr:/srv/gitit/wikidata wiki_gconfs`,
+modifiez les pages que vous voulez, puis `git add .`, `git commit -m "message de commit"`, et `git push`
+Voir la page [wiki](services/wiki) de ce même wiki pour plus d'informations.
