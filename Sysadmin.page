@@ -55,6 +55,8 @@ gconfs.fr:/srv/gitit/wikidata wiki_gconfs`) (quand on a un compte sur le
 serveur, s'entend), éditer le texte, puis le push sur le serveur a nouveau, ce
 qui mettra a jour la version web dynamiquement. Ça s'écrit en markdown.
 
+<!-- TODO: créer des creds automatisés, et uncomment le hook post-receive pour push sur github -->
+
 ### Pad
 
 <!-- TODO -->
