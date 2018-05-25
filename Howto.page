@@ -44,8 +44,8 @@ conditions optimales pour le stream.
 
 ### Réservation de salle(s)
 
-Une fois la fiche event prête il suffit de l'envoyer à Anne-Sophie Pachet
-(anne-sophie.pachet at epita dot fr) avec le bureau (bureau at gconfs dot fr)
+Une fois la fiche event prête il suffit de l'envoyer à Sarah Bensalem
+(sarah.bensalem at epita dot fr) avec le bureau (bureau at gconfs dot fr)
 en copie. A noter qu'il faut prévoir des fiches supplémentaires dans le cas où
 le conférencier souhaite faire un TP, celles-ci se font et s'envoient de la
 même manière.
@@ -58,9 +58,26 @@ Le tout doit être fait au plus tard une semaine avant la conf.
 
 ### Site Web
 
+Pour que le site web ne soit jamais trop en retard, il faut rajouter les
+nouvelles conférences sur le site. Pour cela, clonez le dépot git contenant le
+site (https://github.com/gconfs/website-hyde), allez dans `content/confs`, puis
+créez un nouveau dossier `yyyy-mm-nom_de_la_conférence`. Dans ce dossier, créez
+un fichier `index.html` en vous inspirant des conférences existantes, puis
+rajouter un lien vers cette nouvelle conférence sur la page
+`content/confs/index.html`, dans les conférences a venir. Une fois la conférence
+terminée, n'oubliez pas de la bouger dans les conférences passées!
+
+Pour mettre a jour le site web lui même, il est nécessaire de lancer le
+[playbook Ansible](Sysadmin) `website`
+
 ### News
 
 ### Facebook
+
+### Twitter
+
+Malheureusement, Gconfs a perdu l'accès au compte twitter. Si vous connaissez
+quelqu'un chez twitter, c'est le moment :)
 
 ### Passage dans les salles
 
