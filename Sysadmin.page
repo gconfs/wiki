@@ -1,0 +1,73 @@
+---
+format: markdown
+title: Sysadmin a Gconfs
+categories: base
+---
+
+Gconfs gère des outils pour ses membres. A partir de ce moment, se pose la
+question de l'administration des systèmes et des outils en question.
+
+## Nom de domaine
+
+<!--TODO -->
+
+## Autohébergement - Serveur CRI
+
+Une VM est prêtée a Gconfs par le CRI. C'est un petit truc avec 2 CPU et 1Go de
+RAM, mais c'est déjà pas mal pour ce qu'on veut en faire. Dessus on host a peu
+près tout ce qui est pas trop chiant a hoster, en configurant le tout avec
+[Ansible](https://www.ansible.com)
+
+### Site web Gconfs
+
+#### Comment ça marche?
+
+Le [site de Gconfs](https://gconfs.fr) est fait avec
+[Hyde](https://hyde.github.io), le dépot correspondant se trouve
+[ici](https://github.com/gconfs/website-hyde). Y avait un projet de le remplacer
+par un site en django mais y a pas trop de nouvelles. Le déploiement du site sur
+le serveur est fait automatiquement avec le playbook ansible `website`, qui git
+clone et regénère le site automatiquement.
+
+#### Comment mettre a jour le contenu
+
+Du coup, pour updater le site il faut modifier le dépot, **vérifier que ça
+compile correctement**, push sur le dépot github, puis puller depuis le serveur
+en utilisant le playbook (`sudo ansible-playbook
+/etc/ansible/playbooks/website.yml`)
+
+### Wiki Gconfs
+
+#### Comment ça marche?
+
+Le [wiki de Gconfs](https://wiki.gconfs.fr) utilise
+[gitit](https://github.com/jgm/gitit). Les données du wiki sont donc stockées
+dans git, et il faudrait setup un push vers github en parallelle pour avoir une
+version master. Il peut se déployer via le playbook wiki (`sudo ansible-playbook
+/etc/ansible/playbooks/wiki.yml`), mais ne clone pas (encore?) le contenu
+directement depuis github.
+
+#### Comment mettre a jour le contenu
+
+Pour éditer le wiki, il est bien sur possible d'utiliser l'interface web, mais
+on peut aussi git clone le dépot qui contient les données (`git clone
+gconfs.fr:/srv/gitit/wikidata wiki_gconfs`) (quand on a un compte sur le
+serveur, s'entend), éditer le texte, puis le push sur le serveur a nouveau, ce
+qui mettra a jour la version web dynamiquement. Ça s'écrit en markdown.
+
+### Pad
+
+<!-- TODO -->
+
+## Les trucs externes
+
+### Slack
+
+Avant, on avait un channel IRC sur rézosup. Depuis quelques années, Gconfs est
+passé a [Slack](https://gconfs.slack.com). Bah c'est slack quoi.
+
+### Google
+
+Les comptes email @gconfs.fr sont gérés par gmail, tout comme les mailing lists
+@gconfs.fr. C'est un compte gsuite associatif, mais on utilise vraiment que
+Gmail et google drive pour stocker des fichiers partagés.
