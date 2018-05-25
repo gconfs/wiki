@@ -1,0 +1,107 @@
+# GConfs - HOWTO ?
+
+## Introduction
+
+Cette page a pour but de permettre (en théorie) à n'importe quel membre de
+l'association GConfs de gérer une conférence (de la réservation de la salle
+jusqu'à la gestion du stream tout en passant par la communication).
+
+Retenez qu'il est plus facile de diviser les tâches que d'essayer de tout gérer
+soi même.
+
+### Respo, quésaco ?
+
+Le responsable pour une conf a pour rôle de superviser une conférence, de la
+réservation de la salle jusqu'au stream.
+
+Il doit s'assurer que la salle est réservée suffisamment à l'avance
+(idéalement, la salle doit être reservée plus d'une semaine à l'avance), que la
+communication soit faite à temps et de la disponibilité des personnes aptes à
+gérer le stream.
+
+**TL;DR : Il faut savoir envoyer des mails et faire une fiche événement.**
+
+## Réservation d'une salle
+
+### Génération d'une fiche événement
+
+La création d'une fiche événement se fait à l'aide du générateur dispo sur le
+[bitbucket](https://bitbucket.org/gconfs/fiche-event-generator) de
+l'association. Pour le récupérer il suffit de cloner le repo, la création d'une
+fiche se fait en trois étapes :
+
+- Créer un fichier YAML avec les informations nécéssaires, un \*.yml d'exemple
+  est fourni
+- Génerer un fichier \*.tex avec le générateur : python
+  fiche-event-generator.py [lefichieryaml].yml (pour les plus fainéants, il
+  suffit de rendre fiche-event-generator exécutable avec un chmod +x puis de
+  faire ./fiche-event-generator.py [lefichieryaml].yml)
+- Générer le pdf final avec pdflatex
+
+Concernant la salle à réserver on essaie de prendre en priorité l'Amphi 4 au
+Kremlin-Bicêtre et la VA105 à Villejuif, ce sont les salles qui offrent des
+conditions optimales pour le stream.
+
+### Réservation de salle(s)
+
+Une fois la fiche event prête il suffit de l'envoyer à Anne-Sophie Pachet
+(anne-sophie.pachet at epita dot fr) avec le bureau (bureau at gconfs dot fr)
+en copie. A noter qu'il faut prévoir des fiches supplémentaires dans le cas où
+le conférencier souhaite faire un TP, celles-ci se font et s'envoient de la
+même manière.
+
+Le tout doit être fait au plus tard une semaine avant la conf.
+
+## Communication
+
+### Affiches
+
+### Site Web
+
+### News
+
+### Facebook
+
+### Passage dans les salles
+
+## Matériel
+
+L'association possède actuellement le matériel suivant :
+
+- Deux câbles JACK/RCA
+- Deux câbles JACK/JACK
+- Un câble VGA/DVI
+- Un câble DVI/DVI
+- Un adaptateur HDMI/DVI
+- Une table de mixage ALTO ZMX52
+- Une paire de micros sans fil AKG WMS40MIN2/V-ISM
+- Une webcam Logitech C920
+- Un trépied
+- Une carte d'acquisition Epiphan DVI2USB 3.0
+
+A terme nous cherchons à acquérir le matériel suivant :
+
+- Un ordinateur portable dédié au stream
+- Divers adaptateurs pour la carte d'acquisition qui nous permettront de
+  couvrir le plus de formats disponibles
+
+Le matériel est actuellement entreposé au LSE dans un carton (sur lequel est
+écrit "GConfs" au feutre) et à terme il sera dans une armoire fermée à clef au
+local AirRadio.
+
+## Gestion du Stream
+
+Pour les branchements du matériel voir ![ici](stream_scheme.png).
+
+Concernant la table il ne faut pas toucher au gain, sous peine d'avoir du bruit
+et un son pas forcément plus haut, les micros sont sur les deux entrées "Line"
+et "2/3 Line", la salle est sur "Main Mix" et la carte son externe sur
+"Phones".
+
+#### Côté laptop
+
+##### OBS
+
+##### Youtube
+
+##### Epiphan Capture Tool
