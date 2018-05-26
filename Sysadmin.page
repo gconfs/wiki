@@ -57,6 +57,18 @@ qui mettra a jour la version web dynamiquement. Ça s'écrit en markdown.
 
 <!-- TODO: créer des creds automatisés, et uncomment le hook post-receive pour push sur github -->
 
+### Vault
+
+#### Comment ça marche?
+
+Le [vault](https://vault.gconfs.fr) sert a conserver les mots de passe des
+différents comptes utilisés par Gconfs, pour qu'ils soient partagés entre les
+sysadmins et le bureau et transmis facilement. Le tout est géré par
+[passbolt](https://github.com/passbolt/passbolt_api). Les mots de passe sont
+stockés chiffrés avec GPG.
+⚠️ le vault est pas encore en place. Le playbook ansible `vault` est en cours
+d'écriture mais n'est pas encore fonctionnel.
+
 ### Pad
 
 <!-- TODO -->
