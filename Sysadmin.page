@@ -55,7 +55,8 @@ gconfs.fr:/srv/gitit/wikidata wiki_gconfs`) (quand on a un compte sur le
 serveur, s'entend), éditer le texte, puis le push sur le serveur a nouveau, ce
 qui mettra a jour la version web dynamiquement. Ça s'écrit en markdown.
 
-<!-- TODO: créer des creds automatisés, et uncomment le hook post-receive pour push sur github -->
+<!-- TODO: créer des creds automatisés, et uncomment le hook post-receive pour
+push sur github -->
 
 ### Vault
 
@@ -66,8 +67,30 @@ différents comptes utilisés par Gconfs, pour qu'ils soient partagés entre les
 sysadmins et le bureau et transmis facilement. Le tout est géré par
 [passbolt](https://github.com/passbolt/passbolt_api). Les mots de passe sont
 stockés chiffrés avec GPG.
-⚠️ le vault est pas encore en place. Le playbook ansible `vault` est en cours
-d'écriture mais n'est pas encore fonctionnel.
+
+#### Créer un compte
+
+Pour avoir un compte, il faut demander a quelqu'un qui a la main sur le serveur
+(pour l'instant). Il lancera alors la commande magique (`sudo -H -u www-data
+/srv/vault/bin/cake passbolt register_user -u [email] -f [prénom] -l [nom] -r
+[role(user ou admin)]`) et ça lui donnera une URL, qu'il pourra transmettre a la
+personne qui veut créer le compte pour qu'elle l'active.
+
+#### Comment je l'utilise
+
+Passbolt fonctionne avec une extension navigateur et des applis
+android/iOS/whatever. Il *faut* avoir l'extension pour consulter les
+mots de passe et pour créer son compte. Lors de l'activation du compte, une clé
+GPG est créée (en js dans le browser), et sera utilisée pour déchiffrer les mots
+de passe présents sur le vault. Ça filera aussi un ensemble (couleur + trois
+lettres) qui est utilisé pour identifier passbolt quand il demande un mot de
+passe. Après avoir sauvegardé la clé GPG, la passphrase et cet ensemble (couleur
++ lettres), bah il suffit d'aller sur [vault](https://vault.gconfs.fr) et
+a commencer a stocker/partager des mots de passe.
+
+<!-- TODO: Foutre un serveur mail quelque part et configurer les mails sur
+passbolt pour permettre de créer des comptes depuis l'UI web -->
+
 
 ### Pad
 
