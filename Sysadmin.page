@@ -94,7 +94,21 @@ passbolt pour permettre de créer des comptes depuis l'UI web -->
 
 ### Pad
 
-<!-- TODO -->
+Le [pad](https://pad.gconfs.fr) sert a, euh, écrire des trucs de manière
+collaborative. C'est géré par [CodiMD](https://github.com/hackmdio/codimd).
+
+#### Créer un compte
+
+On va sur la page d'acceil, on clique sur log in, on rentre ses infos, et on
+clique sur register. Done.
+
+#### Comment je l'utilise
+
+L'interface de base comprend un panel a gauche éditable en markdown, et un panel
+a droite qui affiche le résultat HTML. Les couleurs correspondantes aux
+différentes personnes éditant le document sont tout a gauche du panel d'édition,
+et euh voilà quoi 🤷‍♂️
+
 
 ## Les trucs externes
 
